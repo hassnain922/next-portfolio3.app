@@ -19,7 +19,7 @@ const Hero = () => {
           DevOps Engineer.I am profound in infrastructure and implementing scalable and highly available cloud architectures that optimize performance, security, and cost-efficiency.
         </p>
         <CustomButton
-          title="About Me"
+          title="Hire Me"
           containerStyles=" bg-indigo-900 text-2xl text-white rounded-full mt-10"
           handleClick={handleScroll}
         />

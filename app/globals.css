@@ -36,7 +36,7 @@
 }
 /* END: General styles */
 .header {
- @apply p-1 bg-purple-800 flex items-center justify-between text-2xl
+ @apply p-1 mx-4 bg-purple-800 flex items-center justify-between text-2xl
 }
 
 .nav {
@@ -91,7 +91,7 @@
 }
 
 .project__container{
-  @apply flex justify-around 
+  @apply flex justify-around gap-4
 
 }
 
@@ -101,11 +101,8 @@
 }
 
 .project-image {
- justify-content: center;
- align-items: center;
-  margin-top: 25px;
-  width: 250px;
-  border-radius: 125px;
+ 
+ @apply rounded-md mb-5 mt-6 items-center justify-center w-72 h-72
 }
 
 hr {
