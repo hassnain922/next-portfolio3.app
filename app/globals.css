@@ -2,26 +2,118 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/* START: General styles */
+.max-width {
+  @apply max-w-[1440px] mx-auto;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.padding-x {
+  @apply sm:px-16 px-6;
+}
+
+.padding-y {
+  @apply py-4;
+}
+
+.flex-center {
+  @apply flex items-center justify-center;
+}
+
+.flex-between {
+  @apply flex justify-between items-center;
+}
+
+.custom-btn {
+  @apply flex flex-row relative justify-center items-center py-3 px-6 outline-none;
+}
+/* END: General styles */
+.header {
+ @apply p-1 bg-purple-800 flex items-center justify-between text-2xl
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navList {
+  @apply flex no-underline text-center text-2xl
+}
+
+.navItem {
+  margin-right: 10px;
+}
+
+.navItem a {
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+  font-size:24px;
+  line-height: 32px;
+}
+
+.porfolio{
+   width:200px;
+   color: white;
+}
+
+.hero {
+  
+ @apply flex xl:flex-row flex-col gap-5 relative z-0 max-w-[1440px] mx-auto; 
+}
+.hero__title {
+  @apply 2xl:text-[40px] sm:text-[34px] text-[20px] font-extrabold;
+}
+
+.hero__subtitle {
+  @apply text-[27px] font-light mt-5;
+}
+
+.hero__image-container{
+  @apply xl:flex-[1.5] flex justify-end items-end w-full xl:h-screen;
+}
+
+.hero__image {
+  @apply relative xl:w-full w-[90%] xl:h-full h-[590px] z-0;
+}
+
+
+.pro__sector{
+  @apply p-20 text-center flex flex-col 
+}
+
+.project__container{
+  @apply flex justify-around 
+
+}
+
+.project__card{
+ 
+  @apply w-[300px] h-[500px] shadow-lg shadow-gray-400
+}
+
+.project-image {
+ justify-content: center;
+ align-items: center;
+  margin-top: 25px;
+  width: 250px;
+  border-radius: 125px;
+}
+
+hr {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.project-link {
+  text-decoration: none;
+  color: #1c1d25;
 }
