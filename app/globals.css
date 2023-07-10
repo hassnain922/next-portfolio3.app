@@ -36,7 +36,7 @@
 /* END: General styles */
 
 .header {
-  @apply  grid grid-cols-1 sm:grid-cols-2 gap-4 px-4 mx-4 items-center bg-purple-800 text-2xl;
+  @apply  flex  justify-between px-4 mx-4 items-center bg-purple-800 text-2xl;
   
 }
 
