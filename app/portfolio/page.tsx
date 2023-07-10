@@ -3,7 +3,7 @@ import Image from 'next/image'
 const Portfolio = () => {
   return (
    <section className='pro__sector'>
-       <h2 className='text-6xl'>Portfolio</h2>
+       <h2 className='sm:text-2xl md:text-5xl'>Portfolio</h2>
           <div className='project__container'>
               <div className='project__card'>
                   <Image className="project-image" width={1000} height={1000}  src="/first.jpg" alt="Project One Image" />

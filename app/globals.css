@@ -15,7 +15,7 @@
 }
 
 .padding-x {
-  @apply sm:px-16 px-6;
+  @apply sm:px-6 px-4;
 }
 
 .padding-y {
@@ -36,17 +36,16 @@
 /* END: General styles */
 
 .header {
-  @apply  flex  justify-between px-4 mx-4 items-center bg-purple-800 text-2xl;
-  
+  @apply flex justify-between px-4 mx-4 items-center bg-purple-800 sm:text-center sm:text-xs md:text-base;
 }
 
 
 .nav {
-  @apply flex justify-between;
+  @apply flex-nowrap relative flex w-full items-center justify-between bg-purple-800 py-2 shadow-md shadow-black/5 dark:bg-neutral-600 dark:shadow-black/10 lg:flex-wrap lg:justify-start lg:py-4;
 }
 
 .navList {
-  @apply flex no-underline text-center text-2xl;
+  @apply list-none mr-auto flex flex-row pl-0 lg:flex-row;
 }
 
 .navItem {
@@ -54,14 +53,11 @@
 }
 
 .navItem a {
-  text-decoration: none;
-  color: white;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 32px;
+
+ @apply no-underline text-white font-normal sm:text-xs md:text-2xl leading-8
 }
 
-.porfolio {
+.portfolio {
   width: 200px;
   color: white;
 }
@@ -79,11 +75,12 @@
 }
 
 .hero__image-container {
-  @apply xl:flex-[1.5] flex justify-end items-end w-full xl:h-screen;
+  @apply xl:w-[60%] xl:min-h-screen flex justify-end items-end w-full;
 }
 
 .hero__image {
-  @apply relative xl:w-full w-[90%] xl:h-full h-[590px] z-0;
+  @apply relative w-full h-auto z-0;
+  height: 400px; /* Adjust the height as per your requirements */
 }
 
 .pro__sector {
@@ -91,15 +88,15 @@
 }
 
 .project__container {
-  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-6;
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6;
 }
 
 .project__card {
-  @apply  shadow-lg shadow-gray-400;
+  @apply shadow-lg shadow-gray-400;
 }
 
 .project-image {
-  @apply rounded-md mb-5  items-center justify-center w-72 h-72;
+  @apply rounded-md mb-5 items-center justify-center w-72 h-72;
 }
 
 hr {
@@ -112,5 +109,28 @@ hr {
   color: #1c1d25;
 }
 
+@media (max-width: 640px) {
+  .hero {
+    @apply gap-4;
+  }
 
+  .hero__title {
+    @apply 2xl:text-[32px] sm:text-[28px] text-[18px];
+  }
 
+  .hero__subtitle {
+    @apply text-[22px];
+  }
+
+  .hero__image-container {
+    @apply xl:w-full;
+  }
+
+  .hero__image {
+    height: 300px;
+  }
+
+  .project__container {
+    @apply grid-cols-1;
+  }
+}
