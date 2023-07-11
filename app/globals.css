@@ -10,6 +10,9 @@
 }
 
 /* START: General styles */
+.body{
+  @apply min-h-screen 
+}
 .max-width {
   @apply max-w-[1440px] mx-auto;
 }
@@ -36,16 +39,16 @@
 /* END: General styles */
 
 .header {
-  @apply flex justify-between px-4 mx-4 items-center bg-purple-800 sm:text-center sm:text-xs md:text-base;
+  @apply sticky top-0 z-10  bg-purple-800 
 }
 
 
 .nav {
-  @apply flex-nowrap relative flex w-full items-center justify-between bg-purple-800 py-2 shadow-md shadow-black/5 dark:bg-neutral-600 dark:shadow-black/10 lg:flex-wrap lg:justify-start lg:py-4;
+  @apply flex-nowrap relative flex w-full items-center justify-between bg-purple-800 py-2 shadow-md shadow-black/5 dark:bg-neutral-600 dark:shadow-black/10 lg:flex-wrap lg:justify-start lg:py-4 font-medium text-3xl;
 }
 
 .navList {
-  @apply list-none mr-auto flex flex-row pl-0 lg:flex-row;
+  @apply list-none mr-auto flex flex-row pl-0 lg:flex-row ;
 }
 
 .navItem {
@@ -54,7 +57,7 @@
 
 .navItem a {
 
- @apply no-underline text-white font-normal sm:text-xs md:text-2xl leading-8
+ @apply no-underline text-white 
 }
 
 .portfolio {
@@ -63,15 +66,15 @@
 }
 
 .hero {
-  @apply flex xl:flex-row flex-col gap-5 relative z-0 max-w-[1440px] mx-auto;
+  @apply flex flex-col-reverse justify-center sm:flex-row p-6 items-center gap-8 mb-12;
 }
 
 .hero__title {
-  @apply 2xl:text-[40px] sm:text-[34px] text-[20px] font-extrabold;
+  @apply max-w-md text-center text-4xl sm:text-left sm:text-5xl font-extrabold;
 }
 
 .hero__subtitle {
-  @apply text-[27px] font-light mt-5;
+  @apply max-w-md text-2xl mt-4 text-center sm:text-left;
 }
 
 .hero__image-container {
@@ -109,28 +112,5 @@ hr {
   color: #1c1d25;
 }
 
-@media (max-width: 640px) {
-  .hero {
-    @apply gap-4;
-  }
 
-  .hero__title {
-    @apply 2xl:text-[32px] sm:text-[28px] text-[18px];
-  }
 
-  .hero__subtitle {
-    @apply text-[22px];
-  }
-
-  .hero__image-container {
-    @apply xl:w-full;
-  }
-
-  .hero__image {
-    height: 300px;
-  }
-
-  .project__container {
-    @apply grid-cols-1;
-  }
-}
